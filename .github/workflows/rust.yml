@@ -14,8 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install SDL2
-      run: sudo apt-get -y install libsdl2-dev
     - name: Build
       run: cargo build --verbose
     - name: Run tests
@@ -25,8 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install SDL2
-      run: sudo apt-get -y install libsdl2-dev
     - name: Install Clippy
       run: rustup component add clippy
     - name: clippy check
@@ -36,8 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install SDL2
-      run: sudo apt-get -y install libsdl2-dev
     - name: Install rustfmt
       run: rustup component add rustfmt
     - name: Check Formatting
